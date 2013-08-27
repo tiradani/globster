@@ -112,7 +112,7 @@ def _sub_group(m):
 
 def _invalid_regex(repl):
     def _(m):
-        warning("'%s' not allowed within a regular expression. "
+        logger.warning("'%s' not allowed within a regular expression. "
                 "Replacing with '%s'" % (m, repl))
         return repl
     return _
@@ -125,7 +125,7 @@ def _trailing_backslashes_regex(m):
     one on the end that would escape the brackets we wrap the RE in.
     """
     if (len(m) % 2) != 0:
-        warning("Regular expressions cannot end with an odd number of '\\'. "
+        logger.warning("Regular expressions cannot end with an odd number of '\\'. "
                 "Dropping the final '\\'.")
         return m[:-1]
     return m

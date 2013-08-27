@@ -10,7 +10,7 @@ Version:        0
 Release:        1%{?dist}
 Summary:        Provides many helper modules for common uses cases when programming with Python (2.6+)
 
-License:        Fermitools Software Legal Information (Modified BSD License)
+License:        GPLv2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  python2-devel
@@ -41,7 +41,7 @@ cp -r ../README.rst $RPM_BUILD_ROOT%{python_sitelib}/globster
 %{python_sitelib}/globster/
 
 %changelog
-* Mon May 10 2013 Anthony Tiradani <anthony.tiradani@gmail.com> - 0.1
+* Fri Aug 23 2013 Anthony Tiradani <anthony.tiradani@gmail.com> - 0.1
 - initial packaging
 
 

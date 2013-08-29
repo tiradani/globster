@@ -8,3 +8,4 @@ packagename.egg-info/
 *.zip
 .pypirc
 docs/_build
+mock_output

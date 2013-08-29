@@ -17,25 +17,25 @@ BuildRequires:  python2-devel
 
 Provides:       py_globster = %{version}-%{release}
 
-Source:         globster.tar.gz
+Source:         globster-%{version}.tar.gz
 
 
 %description
 Provides an rpm package for the globster project hosted at https://github.com/tsileo/globster
 
 %prep
-%setup -q -n globster
+%setup -q -n globster-%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{python_sitelib}
 install -d $RPM_BUILD_ROOT%{python_sitelib}/globster
-cp -r ../__init__.py $RPM_BUILD_ROOT%{python_sitelib}/globster
-cp -r ../COPYING.txt $RPM_BUILD_ROOT%{python_sitelib}/globster
-cp -r ../globster.py $RPM_BUILD_ROOT%{python_sitelib}/globster
-cp -r ../lazy_regex.py $RPM_BUILD_ROOT%{python_sitelib}/globster
-cp -r ../README.rst $RPM_BUILD_ROOT%{python_sitelib}/globster
+cp -r __init__.py $RPM_BUILD_ROOT%{python_sitelib}/globster
+cp -r COPYING.txt $RPM_BUILD_ROOT%{python_sitelib}/globster
+cp -r globster.py $RPM_BUILD_ROOT%{python_sitelib}/globster
+cp -r lazy_regex.py $RPM_BUILD_ROOT%{python_sitelib}/globster
+cp -r README.rst $RPM_BUILD_ROOT%{python_sitelib}/globster
 
 %files
 %{python_sitelib}/globster/

@@ -29,7 +29,7 @@ import logging
 
 logger = logging.getLogger("globster")
 
-import lazy_regex
+from globster import lazy_regex
 
 # Dummy out some bzr internals
 def mutter(x):
